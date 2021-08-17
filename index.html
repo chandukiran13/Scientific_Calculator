@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container" style="background-color: rgba(245, 245, 220, 0.658);">
+        <h1 class="display-5">Calculator</h1>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control"  aria-describedby="basic-addon2" id = "Input">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('1')">1</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('2')">2</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('3')">3</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="reset()">C</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="del()">Del</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('4')">4</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('5')">5</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('6')">6</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="num('*')">x</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="num('-')">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('7')">7</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('8')">8</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('9')">9</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="num('/')" >÷</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_percentage()">%</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-primary" onclick="num('0')">0</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-outline-primary" onclick="num('.')">.</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('+')">+</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calculate()">=</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_sqrt()">√`</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" oncanplay="calc_cos()">cos</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_sin()">sin</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_tan()">tan</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_exp()">exp</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('**')">^</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num('(')">(</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="num(')')">)</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="calc_log()">log</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" onclick="invert()">x^-1</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
